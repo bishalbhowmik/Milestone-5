@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraph"></p>
+    <input type="text" id="name-field">
+    <button id="update-name">Update</button>
+
+    <button id="button1" onclick="button1()">Button1</button>
+
+    <button id="button2">Button2</button>
+
+
+
+    <script>
+        const paragraph1 = document.getElementById('paragraph');
+
+        function button1(){
+            paragraph1.innerText="Paragraph 1";
+        }
+
+        document.getElementById('button2').addEventListener('click',function(){
+            const paragraph1 = document.getElementById('paragraph');
+            paragraph1.innerText = 'Paragraph 2';
+        })
+
+        /////////////
+
+        document.getElementById('update-name').addEventListener('click', function(){
+            const nameField = document.getElementById('name-field');
+            
+            const paragraph = document.getElementById('paragraph');
+            paragraph.innerText= nameField.value;
+
+            nameField.value='';
+        })
+
+    </script>
+</body>
+</html>
